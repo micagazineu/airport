@@ -1,18 +1,18 @@
 meta {
   name: Generate Token
-  type: http
+  type: https://airportgap.com/api/tokens
   seq: 1
 }
 
 post {
-  url: {{base_url}}/tokens
+  url: {{https://airportgap.com/api}}/tokens
   body: multipartForm
   auth: none
 }
 
 body:multipart-form {
-  email: {{email}}
-  password: {{password}}
+  email: {{test@airportgap.com}}
+  password: {{airportgappassword}}
 }
 
 vars:post-response {

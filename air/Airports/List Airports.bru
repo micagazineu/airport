@@ -1,0 +1,23 @@
+meta {
+  name: List Airports
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{base_url}}/airports
+  body: none
+  auth: none
+}
+
+tests {
+  test("status code is 200", function() {
+    expect(res.getStatus()).to.equal(200);
+  });
+  
+  test("returns a list of airports", function() {
+    const data = res.getBody();
+    expect(data.data).to.be.an('array');
+    expect(data.data.length).to.be.at.most(30);
+  });
+}

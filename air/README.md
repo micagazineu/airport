@@ -14,6 +14,12 @@ This is an automated API test collection for [Airport Gap](https://airportgap.co
    npm install
    ```
 
+2. Configure Credentials:
+   - Open the collection in Bruno.
+   - Edit the Production environment.
+   - Fill in your email and password for the Airport Gap API.
+   - If you don't have an account, register at https://airportgap.com/tokens (via the API or site).
+
 ## Running Tests
 
 To run the automated tests via CLI:

@@ -1,0 +1,34 @@
+meta {
+  name: Generate Token
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{base_url}}/tokens
+  body: multipartForm
+  auth: none
+}
+
+body:multipart-form {
+  email: {{email}}
+  password: {{password}}
+}
+
+vars:pre-request {
+  em: test@airportgap.com
+}
+
+vars:post-response {
+  token: res.getBody().token
+}
+
+tests {
+  test("status code is 200", function() {
+    expect(res.getStatus()).to.equal(200);
+  });
+  
+  test("returns a token", function() {
+    expect(res.getBody().token).to.be.a('string');
+  });
+}

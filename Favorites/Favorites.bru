@@ -1,0 +1,20 @@
+meta {
+  name: Favorites
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{base_url}}/favorites
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: 7NeEUdbsbU25Qdhg7Pe4h8ic
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

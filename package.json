@@ -1,0 +1,11 @@
+{
+  "name": "airport-gap-tests",
+  "version": "1.0.0",
+  "description": "Automated API tests for Airport Gap using Bruno CLI",
+  "scripts": {
+    "test": "bru run --env Production"
+  },
+  "devDependencies": {
+    "@usebruno/cli": "^1.26.0"
+  }
+}

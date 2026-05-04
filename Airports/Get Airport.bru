@@ -1,0 +1,24 @@
+meta {
+  name: Get Airport
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{base_url}}/airports/GIG
+  body: none
+  auth: none
+}
+
+tests {
+  test("status code is 200", function() {
+    expect(res.getStatus()).to.equal(200);
+  });
+  
+  test("returns the correct airport", function() {
+    const data = res.getBody();
+    expect(data.data.id).to.equal('KIX');
+    expect(data.data.attributes.iata).to.equal('KIX');
+    expect(data.data.attributes.name).to.equal('Pacific/Port_Moresby');
+  });
+}

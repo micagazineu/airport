@@ -1,0 +1,25 @@
+meta {
+  name: ID Favorite
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{base_url}}/favorites/45405
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: 7NeEUdbsbU25Qdhg7Pe4h8ic
+}
+
+body:multipart-form {
+  ~id: 9230
+  ~name: 
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

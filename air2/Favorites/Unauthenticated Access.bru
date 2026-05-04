@@ -1,0 +1,17 @@
+meta {
+  name: Unauthenticated Access
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{base_url}}/favorites
+  body: none
+  auth: none
+}
+
+tests {
+  test("status code is 401", function() {
+    expect(res.getStatus()).to.equal(401);
+  });
+}

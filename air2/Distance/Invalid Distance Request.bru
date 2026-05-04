@@ -1,0 +1,22 @@
+meta {
+  name: Invalid Distance Request
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{base_url}}/airports/distance
+  body: multipartForm
+  auth: none
+}
+
+body:multipart-form {
+  from: AAA
+  to: BBB
+}
+
+tests {
+  test("status code is 422", function() {
+    expect(res.getStatus()).to.equal(422);
+  });
+}

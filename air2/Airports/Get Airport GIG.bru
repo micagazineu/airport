@@ -1,0 +1,21 @@
+meta {
+  name: Get Airport GIG
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{base_url}}/airports/GIG
+  body: none
+  auth: none
+}
+
+tests {
+  test("status code is 200", function() {
+    expect(res.getStatus()).to.equal(200);
+  });
+  
+  test("name is Galeao (accented)", function() {
+    expect(res.getBody().data.attributes.name).to.contain('Galeão');
+  });
+}

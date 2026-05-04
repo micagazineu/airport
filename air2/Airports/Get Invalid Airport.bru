@@ -1,0 +1,17 @@
+meta {
+  name: Get Invalid Airport
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{base_url}}/airports/INVALID
+  body: none
+  auth: none
+}
+
+tests {
+  test("status code is 404", function() {
+    expect(res.getStatus()).to.equal(404);
+  });
+}

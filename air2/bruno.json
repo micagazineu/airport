@@ -1,9 +1,0 @@
-{
-  "name": "Airport Gap API - Suite 2",
-  "type": "collection",
-  "version": "1",
-  "ignore": [
-    "node_modules",
-    ".git"
-  ]
-}
